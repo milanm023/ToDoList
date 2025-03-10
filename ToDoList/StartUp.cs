@@ -32,6 +32,7 @@ namespace ToDoList
             {
                 Console.Write("Enter command: ");
                 name = Console.ReadLine();
+                Console.Clear();
                 if (Equals(name.ToLower(), "exit"))
                 {
                     break;
@@ -54,7 +55,8 @@ namespace ToDoList
             Console.WriteLine("\t5. Clear tasks list - Use keyword \"clear\" to clear a task list. (clear)");
             Console.WriteLine("\t6. Clear completed tasks list - Use keyword \"clearcompleted\" to clear completed task list. (clearcompleted)");
             Console.WriteLine("\t7. Save lists - Use keyword \"save\" to save a task lists.");
-            Console.WriteLine("\t8. Exit program - Use keyword \"exit\".");
+            Console.WriteLine("\t8. Help - Use keyword \"help\".");
+            Console.WriteLine("\t9. Exit program - Use keyword \"exit\".");
             Console.WriteLine();
         }
 
@@ -141,6 +143,11 @@ namespace ToDoList
                     {
                         repository.Clear();
                     }
+                    break;
+                case "help":
+                {
+                    Tutorial();
+                }
                     break;
                 case "clearcompleted":
                 {
